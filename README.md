@@ -49,6 +49,7 @@ Estrutura:
 - [Git](https://git-scm.com)
 - [Node.js](https://nodejs.org/en/) v20.11.1
 - [Vue.js 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
 
 ## 🛣️ Como executar o projeto
 

@@ -91,5 +91,6 @@ npm run lint
 - Ícones: **[Font Awesome](https://fontawesome.com/)**, **[Emoji para copiar](https://emojisparacopiar.com/)**
 - Fontes:  **[]()**  **[]()**
 - Paleta: **[Cores](https://paletadecores.com/paleta/f5f5f5/e9e9e9/006666/008584/cccccc/)**
+- Plugins: **[Vuetify](https://vuetifyjs.com/en/)**
 
 ---

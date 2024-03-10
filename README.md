@@ -89,8 +89,8 @@ npm run lint
 - Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  
 - Teste de API:  **[Postman](https://www.postman.com)**
 - Ícones: **[Font Awesome](https://fontawesome.com/)**, **[Emoji para copiar](https://emojisparacopiar.com/)**
-- Fontes:  **[]()**  **[]()**
-- Paleta: **[Cores](https://paletadecores.com/paleta/f5f5f5/e9e9e9/006666/008584/cccccc/)**
+- Fontes:  **[Roboto](https://fonts.google.com/specimen/Roboto)**  **[Poppins](https://fonts.google.com/specimen/Poppins)**
+- Paleta: **[Radix](https://www.radix-ui.com/colors/docs/palette-composition/scales)**
 - Plugins: **[Vuetify](https://vuetifyjs.com/en/)**
 
 ---

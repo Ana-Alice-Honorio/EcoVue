@@ -6,6 +6,24 @@
           <h1>EcoVue</h1>
         </div>
 
+      <v-row>
+        <v-col cols="12">
+          <v-text-field
+            v-model="search"
+            class="mx-auto"
+            density="comfortable"
+            menu-icon=""
+            append-inner-icon="mdi-microphone cursor-pointer"
+            theme="light"
+            variant="solo"
+            placeholder="Pesquisar produto"
+            prepend-inner-icon="mdi-magnify cursor-pointer"
+            style="max-width: 350px; max-height: 40px;"
+            rounded
+          ></v-text-field>
+        </v-col>
+      </v-row>
+
         <div class="cart-button">
           <img src="/cart.ico" class="cart"/>
         </div>
@@ -13,7 +31,17 @@
       </div>
     </header>
   </template>
-  
+
+<script>
+export default {
+  data() {
+    return {
+      search: ''
+    }
+  }
+}
+</script>
+
   <style scoped lang="scss">
   header {
     position: fixed;

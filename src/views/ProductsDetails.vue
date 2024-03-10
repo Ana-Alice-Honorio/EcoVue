@@ -1,3 +1,3 @@
 <template>
-    Detalhes do produto
+  details
 </template>

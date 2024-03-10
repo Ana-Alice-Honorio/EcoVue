@@ -2,12 +2,12 @@
     <header>
       <div class="header-content">
         <div class="title">
-          <img src="../../public/bags.ico" class="logo" />
+          <img src="/bags.ico" class="logo" />
           <h1>EcoVue</h1>
         </div>
 
         <div class="cart-button">
-          <img src="../../public/cart.ico" class="cart"/>
+          <img src="/cart.ico" class="cart"/>
         </div>
 
       </div>

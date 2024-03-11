@@ -3,22 +3,52 @@
     <img :src="product.thumbnail" :alt="product.title" />
     <div class="product-details">
       <h3>{{ product.title.substring(0, 50) + '...' }}</h3>
-      <!-- <p>{{ product.description }}</p> -->
-      <p>R$ {{ product.price }}</p>
+      <div class="price-heart">
+        <p>R$ {{ product.price }}</p>
+        <v-icon @click="toggleFavorite" :color="isFavorite ? 'red' : ''">mdi-heart</v-icon>
+      </div>
     </div>
  </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { defineProps, ref, watchEffect } from 'vue';
 
 const props = defineProps({
   product: {
-    type: Object,
+    type: Object as () => Product,
     default: null
   }
 });
 const { product } = props;
+
+interface Product {
+  thumbnail: string;
+  title: string;
+  price: number;
+}
+
+const isFavorite = ref(false);
+
+// Verificação se é favorito
+watchEffect(() => {
+  const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+  isFavorite.value = favorites.some((fav: Product) => fav.title === product.title);
+});
+
+function toggleFavorite() {
+  const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+  const index = favorites.findIndex((fav: Product) => fav.title === product.title);
+  if (index !== -1) {
+    // Se o produto já for favorito ele não entra na lista de salvos/favoritos
+    favorites.splice(index, 1);
+  } else {
+    // Se o produto não for favorito, adicionar
+    favorites.push(product);
+  }
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+  isFavorite.value = !isFavorite.value;
+}
 </script>
 
 <style scoped lang="scss">
@@ -55,6 +85,12 @@ const { product } = props;
     flex-direction: column;
     justify-content: end;
     background: linear-gradient(to bottom, #00000000, #00000080, #000000);
+
+  .price-heart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   h3 {
     font-size: 14px;

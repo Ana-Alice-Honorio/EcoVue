@@ -11,17 +11,16 @@
 
 ## ⚙️ Funcionalidades
 
-- [] Funcionalidade 1:
-  - [] Entidade 1
-  - [x] Entidade 2
-  - [x] Entidade 3
-  - [x] Entidade 4:
-    - Item 1
-    - Item 2
-
-- [x] Funcionalidade 1:
-  - [x] Entidade 1
-  - [x] Entidade 2
+- [x] Utilizar framework Vue.js
+- [x] Criar uma homepage que contenha uma lista
+- [x] Consumir uma API
+- [ ] Scroll Infinito exibindo 20 cards por vez
+- [x] Biblioteca Vuetify
+- [x] Pré processador SCSS
+- [ ] Mais de uma página com Vue Router
+- [ ] Guardar cards em localStorage
+- [ ] Uso de Typescript
+- [ ] Responsividade
 
 ---
 

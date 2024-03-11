@@ -14,7 +14,7 @@
 - [x] Utilizar framework Vue.js
 - [x] Criar uma homepage que contenha uma lista
 - [x] Consumir uma API
-- [ ] Scroll Infinito exibindo 20 cards por vez
+- [x] Scroll Infinito exibindo 20 cards por vez
 - [x] Biblioteca Vuetify
 - [x] Pré processador SCSS
 - [ ] Mais de uma página com Vue Router

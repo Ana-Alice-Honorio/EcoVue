@@ -18,8 +18,8 @@
 - [x] Biblioteca Vuetify
 - [x] Pré processador SCSS
 - [ ] Mais de uma página com Vue Router
-- [ ] Guardar cards em localStorage
-- [ ] Uso de Typescript
+- [x] Guardar produtos favoritos em localStorage
+- [x] Uso de Typescript
 - [ ] Responsividade
 
 ---
@@ -29,7 +29,6 @@
 Arquitetura:
 
 - Componentes
-- Padrão MVVM
 
 Metodologia:
 
@@ -40,7 +39,6 @@ Estrutura:
 
 - Vue CLI
 - Vue router
-- Vuex
 
 ## Pré-requisitos
 
@@ -87,7 +85,7 @@ npm run lint
 - API:  **[Mercado Livre](https://developers.mercadolivre.com.br)**
 - Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  
 - Teste de API:  **[Postman](https://www.postman.com)**
-- Ícones: **[Font Awesome](https://fontawesome.com/)**, **[Emoji para copiar](https://emojisparacopiar.com/)**
+- Ícones: **[Icon Fonts Vuetify](https://vuetifyjs.com/en/features/icon-fonts/#usage)**, **[Emoji para copiar](https://emojisparacopiar.com/)**
 - Fontes:  **[Roboto](https://fonts.google.com/specimen/Roboto)**, **[Poppins](https://fonts.google.com/specimen/Poppins)**
 - Paleta: **[Radix](https://www.radix-ui.com/colors/docs/palette-composition/scales)**
 - Plugins: **[Vuetify](https://vuetifyjs.com/en/)**

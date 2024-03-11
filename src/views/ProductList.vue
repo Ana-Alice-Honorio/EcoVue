@@ -2,6 +2,11 @@
   <div class="home">
     <div class="product-list">
       <ProductCard v-for="product in products" :key="product.id" :product="product" />
+      <v-progress-circular
+      v-if="loading"
+      indeterminate
+      color="primary"
+    ></v-progress-circular>
     </div>
   </div>
 </template>
@@ -11,10 +16,38 @@ import ProductCard from '../components/ProductCard.vue';
 import { fetchProducts } from '../services/callApi.js';
 import { ref, onMounted } from 'vue';
 
+//produtos, qtd por página e estado inicial do loading
 const products = ref([]);
+const pageSize = 20;
+let page = 1;
+const loading = ref(false);
+
+const loadInitialItems = async () => {
+  loading.value = true; 
+
+// Carrega os primeiros 20 itens e incrementa
+  products.value = await fetchProducts(page, pageSize);
+  page++;
+  loading.value = false;
+};
+
+const loadMoreItems = async () => {
+  if (loading.value) return;
+  loading.value = true; 
+  const newProducts = await fetchProducts(pageSize);
+  products.value = [...products.value, ...newProducts];
+  loading.value = false;
+};
 
 onMounted(async () => {
-  products.value = await fetchProducts();
+  await loadInitialItems();
+});
+
+// Se o usuário chegou ao final da página, carregue mais itens
+window.addEventListener('scroll', () => {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    loadMoreItems();
+  }
 });
 </script>
 
@@ -35,6 +68,13 @@ onMounted(async () => {
   background-color: var(--mauve-a3);
   backdrop-filter: blur(2px);
   border-radius: 4px;
+}
+
+.progress-circular {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 768px) {

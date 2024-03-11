@@ -55,7 +55,7 @@ function toggleFavorite() {
 .product-card {
   position: relative;
   width: 235px;
-  height: 355px;
+  height: 300px;
   font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;

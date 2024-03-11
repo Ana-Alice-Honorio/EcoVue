@@ -9,7 +9,6 @@
       <v-row>
         <v-col cols="12">
           <v-text-field
-            v-model="search"
             class="mx-auto"
             density="comfortable"
             menu-icon=""
@@ -31,13 +30,6 @@
       </div>
     </header>
   </template>
-
-<script>
-import { ref } from 'vue';
-
-const search = ref('');
-console.log(search.value);
-</script>
 
   <style scoped lang="scss">
   header {

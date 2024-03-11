@@ -33,13 +33,10 @@
   </template>
 
 <script>
-export default {
-  data() {
-    return {
-      search: ''
-    }
-  }
-}
+import { ref } from 'vue';
+
+const search = ref('');
+console.log(search.value);
 </script>
 
   <style scoped lang="scss">

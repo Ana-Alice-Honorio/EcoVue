@@ -6,23 +6,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ProductCard from '../components/ProductCard.vue';
-import { fetchProducts} from '../services/callApi.js';
+import { fetchProducts } from '../services/callApi.js';
+import { ref, onMounted } from 'vue';
 
-export default {
-  components: {
-    ProductCard
-  },
-  data() {
-    return {
-      products: []
-    };
-  },
-  async created() {
-    this.products = await fetchProducts();
-  }
-};
+const products = ref([]);
+
+onMounted(async () => {
+  products.value = await fetchProducts();
+});
 </script>
 
 <style scoped lang="scss">

@@ -18,7 +18,6 @@
             placeholder="Pesquisar produto"
             prepend-inner-icon="mdi-magnify cursor-pointer"
             style="max-width: 350px; max-height: 40px;"
-            rounded
           ></v-text-field>
         </v-col>
       </v-row>
@@ -35,7 +34,6 @@
   header {
     position: fixed;
     width: 100%;
-    top: 0;
     background-color: var(--green-4);
     border-bottom: 1px solid var(--mauve-a6);
     z-index: 999;
@@ -45,26 +43,30 @@
     padding: 16px;
     max-width: 1366px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
+
   .title,
   .cart-button {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
 
     cursor: pointer;
-  
-    .logo,
+    .logo {
+      margin-bottom: 5px;
+    }
+
     .cart {
+      max-height: 40px;
+    }
+    
+    .logo{
       max-width: 160px;
       max-height: 36px;
     }
   
     h1 {
       font-family: "Poppins", sans-serif;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 400;
     }
   }

@@ -16,26 +16,30 @@ import ProductCard from '../components/ProductCard.vue';
 import { fetchProducts } from '../services/callApi.js';
 import { ref, onMounted } from 'vue';
 
-//produtos, qtd por página e estado inicial do loading
+// produtos, quantidade por página e estado inicial do loading
 const products = ref([]);
 const pageSize = 20;
-let page = 1;
+let offset = 0;
 const loading = ref(false);
 
 const loadInitialItems = async () => {
   loading.value = true; 
-
-// Carrega os primeiros 20 itens e incrementa
-  products.value = await fetchProducts(page, pageSize);
-  page++;
+  // Carrega os primeiros 20 itens
+  products.value = await fetchProducts(offset, pageSize);
+  offset += pageSize;
   loading.value = false;
 };
 
 const loadMoreItems = async () => {
   if (loading.value) return;
   loading.value = true; 
-  const newProducts = await fetchProducts(pageSize);
-  products.value = [...products.value, ...newProducts];
+  // Carrega mais 20 itens a partir do offset atual
+  const newProducts = await fetchProducts(offset, pageSize);
+  // Verifica se houve novos produtos retornados
+  if (newProducts.length > 0) {
+    products.value = [...products.value, ...newProducts];
+    offset += pageSize;
+  }
   loading.value = false;
 };
 

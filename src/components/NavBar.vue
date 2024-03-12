@@ -6,10 +6,9 @@
           <h1>EcoVue</h1>
         </div>
 
-      <v-row>
-        <v-col cols="12">
+      <v-row style="max-width: 50%;">
+        <v-col cols="9">
           <v-text-field
-            class="mx-auto"
             density="comfortable"
             menu-icon=""
             append-inner-icon="mdi-microphone cursor-pointer"
@@ -17,8 +16,23 @@
             variant="solo"
             placeholder="Pesquisar produto"
             prepend-inner-icon="mdi-magnify cursor-pointer"
-            style="max-width: 350px; max-height: 40px;"
+            style="max-width: 350px; max-height: 40px; margin-left: auto "
           ></v-text-field>
+        </v-col>
+
+        <v-col cols="3">
+          <v-menu
+            ref="menu"
+            offset-y
+            transition="scale-transition"
+            :close-on-content-click="false"
+          >
+            <template v-slot:activator="{ }">
+              <v-btn icon>
+                <v-icon>mdi-filter</v-icon>
+              </v-btn>
+            </template>
+          </v-menu>
         </v-col>
       </v-row>
 
@@ -43,6 +57,7 @@
     padding: 16px;
     max-width: 1366px;
     display: flex;
+    justify-content: space-between;
 
   .title,
   .cart-button {

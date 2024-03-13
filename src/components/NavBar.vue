@@ -1,11 +1,13 @@
 <template>
     <header>
       <div class="header-content">
-        <div class="title">
-          <img src="/bags.ico" class="logo" />
-          <h1>EcoVue</h1>
-        </div>
-
+        <router-link to="/" class="back-link">
+          <div class="title">
+            <img src="/bags.ico" class="logo" />
+            <h1>EcoVue</h1>
+          </div>
+        </router-link>
+     
       <v-row style="max-width: 50%;">
         <v-col cols="9">
           <v-text-field
@@ -59,6 +61,14 @@
     display: flex;
     justify-content: space-between;
 
+    .back-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none; 
+    }
+  }
+
   .title,
   .cart-button {
     display: flex;
@@ -83,6 +93,7 @@
       font-family: "Poppins", sans-serif;
       font-size: 25px;
       font-weight: 400;
+      color: #000;
     }
   }
 }

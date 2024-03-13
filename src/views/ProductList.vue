@@ -13,7 +13,7 @@
 
 <script setup>
 import ProductCard from '../components/ProductCard.vue';
-import { fetchProducts } from '../services/callApi.js';
+import { fetchProducts } from '../services/callApi.ts';
 import { ref, onMounted } from 'vue';
 
 // produtos, quantidade por página e estado inicial do loading

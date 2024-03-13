@@ -1,6 +1,8 @@
 <template>
   <div class="product-card">
-    <img :src="product.thumbnail" :alt="product.title" />
+    <router-link :to="{ name: 'ProductDetails', params: { id: product.id } }">
+      <img :src="product.thumbnail" :alt="product.title" />
+    </router-link>
     <div class="product-details">
       <h3>{{ product.title.substring(0, 50) + '...' }}</h3>
       <div class="price-heart">
@@ -26,6 +28,7 @@ interface Product {
   thumbnail: string;
   title: string;
   price: number;
+  id: string;
 }
 
 const isFavorite = ref(false);

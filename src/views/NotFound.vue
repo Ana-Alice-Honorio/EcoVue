@@ -23,8 +23,12 @@
    height: 92vh;
    background-color: var(--mauve-a3);
 
+   p {
+    font-family: "Poppins", sans-serif;
+   }
+
   .back-link {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--green-9); 
     text-decoration: none;
 

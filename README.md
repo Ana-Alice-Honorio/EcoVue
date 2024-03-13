@@ -17,9 +17,10 @@
 - [x] Scroll Infinito exibindo 20 cards por vez
 - [x] Biblioteca Vuetify
 - [x] Pré processador SCSS
-- [ ] Mais de uma página com Vue Router
+- [x] Mais de uma página com Vue Router
 - [x] Guardar produtos favoritos em localStorage
 - [x] Uso de Typescript
+- [x] Página NotFound
 - [ ] Responsividade
 
 ---

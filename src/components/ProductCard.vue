@@ -118,7 +118,7 @@ function toggleFavorite() {
 }
 
 @media only screen and (width < 414px) {
-  .movie-card {
+  .product-card {
     width: 235px;
     height: 355px;
   }

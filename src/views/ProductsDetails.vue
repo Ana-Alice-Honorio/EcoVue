@@ -86,5 +86,18 @@ img {
 
 .custom-button {
   margin-top: 36px;
+  background-color: var(--green-11);
+  color: #fff;
+
+  &:hover {
+      background-color: var(--green-9); 
+    }
 }
+
+@media only screen and (max-width: 768px) {
+  .card-details{
+   flex-direction: column;
+ }
+}
+
 </style>

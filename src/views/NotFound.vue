@@ -48,6 +48,17 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .body img {
+    max-width: 300px;
+  }
+
+  p,
+  .back-link {
+    font-size: 15px;
+  }
+}
+
   </style>
   
   

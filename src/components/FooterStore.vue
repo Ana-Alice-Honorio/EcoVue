@@ -24,8 +24,9 @@
   
   @media only screen and (max-width: 768px) {
     footer {
-      padding: 20px;
-      font-weight: 700;
+      padding: 15px;
+      font-weight: 500;
     }
   }
+
   </style>

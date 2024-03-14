@@ -7,6 +7,8 @@
 
 ![EcoVue]()
 
+## Deploy em [Ecovue](https://eco-vue-inky.vercel.app/)
+
 ![status](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green)
 
 ## ⚙️ Funcionalidades

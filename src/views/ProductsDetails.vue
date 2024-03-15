@@ -110,4 +110,16 @@ img {
  }
 }
 
+@media only screen and (width < 414px) {
+   .product-details  {
+      .title {
+        font-size: 18px;
+      }
+      .price {
+        font-size: 25px;
+      }
+    }
+  }
+  
+
 </style>

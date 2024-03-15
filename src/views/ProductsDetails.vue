@@ -4,10 +4,9 @@
       <img :src="product.thumbnail" :alt="product.title" />
     </div>
     <div class="product-details">
-      <p>{{ product.title }}</p>
-      <p>{{ product.price }}</p>
-      <p>{{ product.id }}</p>
-      <p>{{ product.description }}</p>
+      <p class="title">{{ product.title }}</p>
+      <p class="price">R$: {{ product.price }}</p>
+      <p class="description">{{ product.description }}</p>
       <v-btn class="custom-button" block>Adicionar no carrinho</v-btn>
     </div>
   </div>
@@ -82,6 +81,17 @@ img {
   color: black;
   font-size: larger;
   font-family: "Roboto", sans-serif;
+
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+  }
+
+  .price {
+    font-size: 30px;
+    color: var(--green-11);
+  }
 }
 
 .custom-button {

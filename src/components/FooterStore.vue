@@ -18,8 +18,12 @@
     font-weight: 400;
     line-height: 20px;
     color: var( --mauve-12);
-    background-color: var(--green-4);
+    background-color: var(--green-11);
     border-top: 1px solid var(--mauve-a6);
+
+     p {
+      color: #fff;
+     }
   }
   
   @media only screen and (max-width: 768px) {

@@ -29,7 +29,7 @@
 
   .back-link {
     font-family: "Poppins", sans-serif;
-    color: var(--green-9); 
+    color: var(--green-11); 
     text-decoration: none;
 
     &:hover {

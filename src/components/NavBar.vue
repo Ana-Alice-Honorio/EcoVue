@@ -7,36 +7,6 @@
             <h1>EcoVue</h1>
           </div>
         </router-link>
-     
-      <v-row style="max-width: 50%;">
-        <v-col cols="9">
-          <v-text-field
-            density="comfortable"
-            menu-icon=""
-            append-inner-icon="mdi-microphone cursor-pointer"
-            theme="light"
-            variant="solo"
-            placeholder="Pesquisar produto"
-            prepend-inner-icon="mdi-magnify cursor-pointer"
-            style="max-width: 350px; max-height: 40px; margin-left: auto "
-          ></v-text-field>
-        </v-col>
-
-        <v-col cols="3">
-          <v-menu
-            ref="menu"
-            offset-y
-            transition="scale-transition"
-            :close-on-content-click="false"
-          >
-            <template v-slot:activator="{ }">
-              <v-btn icon>
-                <v-icon>mdi-filter</v-icon>
-              </v-btn>
-            </template>
-          </v-menu>
-        </v-col>
-      </v-row>
 
         <div class="cart-button">
           <img src="/cart.ico" class="cart"/>
@@ -50,7 +20,7 @@
   header {
     position: fixed;
     width: 100%;
-    background-color: var(--green-4);
+    background-color: var(--green-11);
     border-bottom: 1px solid var(--mauve-a6);
     z-index: 999;
   }
@@ -60,6 +30,7 @@
     max-width: 1366px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .back-link {
     text-decoration: none;
@@ -93,12 +64,17 @@
       font-family: "Poppins", sans-serif;
       font-size: 25px;
       font-weight: 400;
-      color: #000;
+      color: #fff;
     }
   }
 }
   
   @media only screen and (width < 414px) {
+    .header-content{
+      display: flex;
+      align-items: center;
+    }
+
     .header-content .title {
       .logo {
         max-width: 128px;
